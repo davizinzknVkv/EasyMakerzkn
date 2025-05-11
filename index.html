@@ -1,62 +1,126 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plataforma de Redações</title>
+  <meta charset="UTF-8">
+  <title>Doritus Essay Maker 🍕</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      background: url('https://images.unsplash.com/photo-1517841905240-472988babdf9') no-repeat center center fixed;
-      background-size: cover;
-      font-family: Arial, sans-serif;
-      color: white;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
       text-align: center;
-      flex-direction: column;
-      padding: 20px;
+      padding: 40px 20px;
     }
-
     h1 {
       font-size: 3rem;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      margin-bottom: 10px;
+      color: #ff00aa;
     }
-
-    p {
+    h1 span {
+      color: #ff66c4;
+    }
+    .subtitle {
       font-size: 1.2rem;
-      margin-bottom: 2rem;
-      max-width: 600px;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+      margin-bottom: 40px;
     }
-
-    a.button {
-      background-color: #ffffff;
-      color: #000000;
-      padding: 15px 30px;
-      border-radius: 30px;
-      text-decoration: none;
+    .bookmarklet, .drag-bookmarklet {
+      display: inline-block;
+      background-color: #333;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 10px;
       font-weight: bold;
-      transition: background 0.3s;
+      font-size: 1rem;
+      text-decoration: none;
+      margin: 10px;
+      border: 2px solid #fff;
     }
-
-    a.button:hover {
-      background-color: #dddddd;
+    .copy-button {
+      background-color: #ff00aa;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .copy-button:hover {
+      background-color: #e60099;
+    }
+    .tutorial-section {
+      margin-top: 40px;
+    }
+    iframe {
+      width: 90%;
+      max-width: 720px;
+      height: 400px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+    .discord {
+      margin-top: 40px;
+    }
+    .discord a {
+      color: #ff00ff;
+      font-weight: bold;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <h1>Plataforma de Redações</h1>
-  <p>Envie suas redações, receba feedbacks e melhore sua escrita para o ENEM e vestibulares.</p>
-  <a href="https://forms.gle/seu-formulario-aqui" class="button">Acessar plataforma</a>
+
+  <h1>Doritus <span>Essay Maker</span> 🍕</h1>
+  <p class="subtitle">faça sua redação com facilidade :)</p>
+
+  <!-- Clique para executar -->
+  <a class="bookmarklet"
+     href="javascript:fetch(`https://res.cloudinary.com/dcwnwmtgc/raw/upload/v1743256849/cacetada.js`).then(r => r.text()).then(r => eval(r));">
+    🚀 Usar Bookmarklet
+  </a>
+
+  <!-- Arraste para barra de favoritos -->
+  <a class="drag-bookmarklet"
+     href="javascript:fetch(`https://res.cloudinary.com/dcwnwmtgc/raw/upload/v1743256849/cacetada.js`).then(r => r.text()).then(r => eval(r));"
+     draggable="true">
+    📌 Arraste para Favoritos
+  </a>
+
+  <!-- Botão para copiar o script -->
+  <br><br>
+  <button class="copy-button" onclick="copiarScript()">📋 Copiar Script</button>
+
+  <script>
+    function copiarScript() {
+      const script = "javascript:fetch(`https://res.cloudinary.com/dcwnwmtgc/raw/upload/v1743256849/cacetada.js`).then(r => r.text()).then(r => eval(r));";
+      navigator.clipboard.writeText(script).then(function() {
+        alert('Script copiado com sucesso!');
+      }, function(err) {
+        alert('Erro ao copiar o script.');
+      });
+    }
+  </script>
+
+  <!-- Tutorial incorporado -->
+  <div class="tutorial-section">
+    <h2>📺 Tutorial</h2>
+    <p>Veja como usar o Doritus direto no navegador:</p>
+    <iframe 
+      src="https://www.youtube.com/embed/O9SM7zuay9w?si=eVGkMbXUfk-7zbj-" 
+      title="Tutorial Doritus"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Discord -->
+  <div class="discord">
+    <p>Entre no nosso servidor do Discord:</p>
+    <p>🍕 <a href="https://discord.gg/">Platform Destroyer</a></p>
+    <p><a href="#">Encontre Mais Scripts Aqui!</a></p>
+  </div>
+
 </body>
 </html>
